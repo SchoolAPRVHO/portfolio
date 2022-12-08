@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Contact from "./components/Contact";
 import Nav from "./components/core/Nav";
@@ -6,19 +6,23 @@ import Home from "./components/Home";
 import Showcase from "./components/Showcase";
 import "./styles.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { CssBaseline } from "@mui/material";
+import { Button, CssBaseline } from "@mui/material";
 import Showcases from "./components/showcases/Showcases";
+import orangeTheme from "./themes/redOrange";
+import modernTheme from "./themes/modern";
+import greenTheme from "./themes/green";
 
 const App = () => {
-  const darkTheme = createTheme({
-    palette: {
-      mode: "light" 
-    },
-  });
+  const [theme, setTheme] = useState(greenTheme);
+  const toggleTheme = () => {
+    setTheme(theme === orangeTheme ? modernTheme : orangeTheme);
+  };
+
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <Nav />
+      <Button title="Toggle Theme" onClick={toggleTheme} style={{width:"fit-content"}}></Button>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/showcase"  >
