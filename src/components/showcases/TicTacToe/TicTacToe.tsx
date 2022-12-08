@@ -1,5 +1,5 @@
+import { Container } from '@mui/material';
 import React, { FC, useState } from 'react';
-import QuizApp from '../QuizApp/QuizApp';
 import styles from './TicTacToe.module.css';
 
 const TicTacToe = () => {
@@ -27,7 +27,7 @@ const TicTacToe = () => {
     ];
 
     for (let positions of winPositions) {
-      if (board[positions[0]] == board[positions[1]] && board[positions[1]] == board[positions[2]]) {
+      if (board[positions[0]] === board[positions[1]] && board[positions[1]] === board[positions[2]]) {
         return board[positions[0]]
       }
     }
@@ -60,9 +60,12 @@ const TicTacToe = () => {
 };
 
 const App: FC = () => (
-  <div className={styles.TicTacToe} style={{marginTop: 10, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
-    <TicTacToe/>
-  </div>
+  <Container className={styles.container}>
+    <h1>Tic Tac Toe</h1>
+    <div className={styles.TicTacToe} style={{marginTop: 10, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
+      <TicTacToe/>
+    </div>
+  </Container>
 );
 
 export default () => <App />;

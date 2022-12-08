@@ -1,3 +1,31 @@
-.ButtonCalc {
+.containerWrapper {
+    padding: 2rem  0;
+    margin: 2rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+}
 
+.addButton {
+    font-size: 1.5rem;
+    background-color: purple;
+    color: white;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+.subtractButton {
+    font-size: 1rem;
+    background-color: red;
+    color: white;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+.additionButton {
+    font-size: 1rem;
+    background-color: green;
+    color: white;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
 }

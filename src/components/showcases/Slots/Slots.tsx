@@ -1,4 +1,5 @@
 
+import { Container } from '@mui/material';
 import React, { useState } from 'react';
 import slotCherry from './assets/slot-cherry.png';
 import slotLemon from './assets/slot-lemon.png';
@@ -60,7 +61,7 @@ export const SlotMachine = ({ slots }: { slots: number }) => {
           <Slot value={slot} key={i} />
         ))}
       </div>
-      {money == 0 && <p className={styles.linearWipe}>Je bent bankroet!</p>}
+      {money === 0 && <p className={styles.linearWipe}>Je bent bankroet!</p>}
  
     </div>
   );
@@ -68,9 +69,12 @@ export const SlotMachine = ({ slots }: { slots: number }) => {
 
 const Slots = () => {
   return (
-    <div className={styles.Slots}>
-      <SlotMachine slots={3} />
-    </div>
+    <Container className={styles.container} maxWidth="md">
+      <h1>Slotmachine</h1>
+      <div className={styles.Slots}>
+        <SlotMachine slots={3} />
+      </div>
+    </Container>
   );
 };
 

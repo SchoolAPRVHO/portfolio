@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import React, { FC, useState } from 'react';
 import styles from './ButtonCalc.module.css';
 
@@ -6,7 +6,10 @@ interface ButtonCalcProps {}
 
 const ButtonCalc: FC<ButtonCalcProps> = () => (
   <div className={styles.ButtonCalc}>
-        <CounterList/>
+        <Container className={styles.containerWrapper} maxWidth="md">
+            <h1>The Button Calculator</h1>
+            <CounterList/>
+        </Container>
 
   </div>
 );
@@ -39,14 +42,14 @@ const CounterList : FC = () => {
               }
               return (
                   <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent:"center"}}>
-                      <button onClick={() => decreaseCounter(index)}>Omlaag</button>
+                      <button className={ styles.subtractButton } onClick={() => decreaseCounter(index)}>Omlaag</button>
                       <div style={{flex: 1, display: "flex", justifyContent: "center", alignItems:"center", color: color}}>Count: {counter}</div>
-                      <button onClick={() => increaseCounter(index)}>Omhoog</button>
+                      <button className={styles.additionButton} onClick={() => increaseCounter(index)}>Omhoog</button>
                   </div>    
               )
           })}
           <p>Som van de tellers: {counters.reduce((prev, curr) => prev + curr, 0)}</p>
-          <button onClick={addCounter}>Voeg teller toe</button>
+          <button className={styles.addButton} onClick={addCounter}>Voeg teller toe</button>
       </>
   )
 

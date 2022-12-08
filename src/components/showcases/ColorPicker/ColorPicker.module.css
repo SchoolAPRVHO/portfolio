@@ -1,1 +1,11 @@
-.ColorPicker {}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem auto;
+    border: 2px solid black;
+    border-radius: 2rem;
+}
