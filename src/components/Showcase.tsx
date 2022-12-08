@@ -22,15 +22,33 @@ import { IShowcase } from '../interfaces';
 const showcases: IShowcase[] = [
     {
         id: 1,
-        title: 'Showcase 1',
-        description: 'This is a media card. You can use this section to describe the content.',
+        title: 'Button Counter',
+        description: 'This application is desigend to create counters and add or subtract one with a punch of a button',
         path: "/showcase/1"
         },
     {
         id: 2,
-        title: 'Showcase 2',
-        description: 'This is a media card. You can use this section to describe the content.',
+        title: 'Color Picker',
+        description: 'This application is desigend to get one of the presetcolors to choose the color of the square below',
         path: "/showcase/2"
+        },
+    {
+        id: 3,
+        title: 'Quiz Application',
+        description: 'This application is desigend to get questions from a QuizAPI and to show you if zou were right or not',
+        path: "/showcase/3"
+        },
+    {
+        id: 4,
+        title: 'Slot machines',
+        description: 'This application is desigend to show you slotmachines and to check if you won',
+        path: "/showcase/4"
+        },
+    {
+        id: 5,
+        title: 'Tic Tac Toe',
+        description: 'This application is desigend to play the game Tic Tac Toe',
+        path: "/showcase/5"
         },
 ]
 

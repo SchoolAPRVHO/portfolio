@@ -7,6 +7,7 @@ import Showcase from "./components/Showcase";
 import "./styles.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
+import Showcases from "./components/showcases/Showcases";
 
 const App = () => {
   const darkTheme = createTheme({
@@ -20,7 +21,10 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/showcase" element={<Showcase />} />
+        <Route path="/showcase"  >
+          <Route index element={<Showcase />}/>
+          <Route path=":showcaseId" element={<Showcases />} />
+        </Route>
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </ThemeProvider>
