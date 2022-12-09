@@ -120,20 +120,7 @@ const Showcase = () => {
               pass the time, and the Tic Tac Toe game is a classic that never
               goes out of style.
               <br />
-              <br />
-              On this page, you can find an overview of the projects that I have
-              worked on. One of my projects is the Button Counter. This is a
-              simple application that allows users to keep track of the number
-              of times a button is clicked. It is a great tool for counting
-              things like the number of times a user performs an action on a
-              website. Another project that I have worked on is the Color
-              Picker. This is a fun and useful tool that allows users to select
-              a color from a range of options. It is great for choosing colors
-              for design projects or for experimenting with different color
-              combinations. I have also developed a Quiz Application. This is a
-              versatile tool that can be used to train your knowledge on any
-              topic. It allows users to answer multiple-choice or true/false
-              questions. In addition to these projects, I have also created a
+              <br /> In addition to these projects, I have also created a
               Pokemon Overview. This is a simple application that provides
               details on different Pokemon, such as their type, abilities, and
               stats. It is a great tool for Pokemon fans who want to learn more
