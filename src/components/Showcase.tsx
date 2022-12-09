@@ -54,6 +54,12 @@ const showcases: IShowcase[] = [
     description: "This application is desigend to play the game Tic Tac Toe",
     path: "/showcase/5",
   },
+  {
+    id: 6,
+    title: "Pokemon App",
+    description: "This application is a basic start and Pokedex",
+    path: "/showcase/6",
+  },
 ];
 
 const theme = createTheme();

@@ -33,44 +33,49 @@ const Home = () => {
           </Typography>
           <Grid container spacing={20}>
             <Grid item xs={12} sm={8}>
-            <Typography
-              variant="h6"
-              align="left"
-              color="text.secondary"
-              paragraph
-            >
-              Beste bezoeker,<br/><br/> Ben je op zoek naar een ervaren programmeur die
-              werkt met de modernste technologieën, zoals React en Material UI?
-              Zoek niet verder! Mijn naam is Raven en ik ben enthousiast om mijn
-              vaardigheden en kennis te laten zien op deze portfolio-website.<br/><br/> Op
-              deze website zult u enkele van mijn meest trotse projecten zien,
-              samen met een beschrijving van de functies en technologieën die ik
-              heb gebruikt. Bekijk hoe ik de kracht van React en Material UI heb
-              gebruikt om gebruiksvriendelijke en schaalbare front-end
-              applicaties te bouwen.<br/><br/> Ik ben er trots op om te laten zien wat ik
-              kan doen en ik ben altijd op zoek naar nieuwe uitdagingen. Neem
-              contact met mij op als je geïnteresseerd bent in mijn werk of als
-              je vragen of opmerkingen hebt.<br/><br/> Bedankt voor het bezoeken van mijn
-              portfolio-website. Ik hoop dat je mijn werk zult waarderen!<br/><br/> Met
-              vriendelijke groet,<br/><br/> Raven
-            </Typography>
+              <Typography
+                variant="h6"
+                align="left"
+                color="text.secondary"
+                paragraph
+              >
+                "Dear visitor, <br />
+                <br />Are you looking for an experienced programmer who
+                works with the latest technologies, such as React and Material
+                UI? Look no further! My name is Raven and I am excited to show
+                off my skills and knowledge on this portfolio website. <br />
+                <br />On this
+                website, you will see some of my most proud projects, along with
+                a description of the features and technologies I have used. See
+                how I have used the power of React and Material UI to build
+                user-friendly and scalable front-end applications. <br />
+                <br />I am proud to
+                show off what I can do and I am always looking for new
+                challenges. Please contact me if you are interested in my work
+                or if you have any questions or comments. <br />
+                <br />Thank you for visiting
+                my portfolio website. I hope you will appreciate my work!<br />
+                <br />
+                Sincerely, <br />
+                <br />Raven" 
+              </Typography>
             </Grid>
             <Grid item xs={12} sm={4}>
-            <ImageListItem
-              sx={{
-                bgcolor: "background.paper",
-                pt: 8,
-                pb: 6,
-                width: 200,
-              }}
-            >
-              <img
-                src={"https://thispersondoesnotexist.com/image"}
-                alt={"This person doesn't exist"}
-                loading="lazy"
-                style={{ borderRadius: "50%" }}
-              />
-            </ImageListItem>
+              <ImageListItem
+                sx={{
+                  bgcolor: "background.paper",
+                  pt: 8,
+                  pb: 6,
+                  width: 200,
+                }}
+              >
+                <img
+                  src={"https://thispersondoesnotexist.com/image"}
+                  alt={"This person doesn't exist"}
+                  loading="lazy"
+                  style={{ borderRadius: "50%" }}
+                />
+              </ImageListItem>
             </Grid>
           </Grid>
           <Stack
