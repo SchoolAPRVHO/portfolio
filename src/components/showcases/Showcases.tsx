@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import ButtonCalc from "./ButtonCalc/ButtonCalc";
 import ColorPicker from "./ColorPicker/ColorPicker";
-import DadJoke from "./DadJoke/Dadjoke";
+import DadJoke from "../api/DadJoke/Dadjoke";
 import PokemonApp from "./Pokemon/Pokemon";
 import QuizAppComplete from "./QuizApp/QuizApp";
 import Slots from "./Slots/Slots";

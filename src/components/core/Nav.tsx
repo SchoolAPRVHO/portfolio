@@ -18,6 +18,7 @@ import { INavigation } from '../../interfaces';
 const pages : INavigation[] = [
     { name: 'Home', path: '/' },
     { name: 'Showcase', path: '/showcase' },
+    { name: 'Api', path: '/api' },
     { name: 'Contact', path: '/contact' },
 ]
 

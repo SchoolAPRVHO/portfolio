@@ -11,6 +11,8 @@ import Showcases from "./components/showcases/Showcases";
 import orangeTheme from "./themes/redOrange";
 import modernTheme from "./themes/modern";
 import greenTheme from "./themes/green";
+import Apis from "./components/api/Apis";
+import Api from "./components/Api";
 
 const App = () => {
   const [theme, setTheme] = useState(greenTheme);
@@ -28,6 +30,10 @@ const App = () => {
         <Route path="/showcase"  >
           <Route index element={<Showcase />}/>
           <Route path=":showcaseId" element={<Showcases />} />
+        </Route>
+        <Route path="/api">
+          <Route index element={<Api />} />
+          <Route path=":apiId" element={<Apis />} />
         </Route>
         <Route path="/contact" element={<Contact />} />
       </Routes>
