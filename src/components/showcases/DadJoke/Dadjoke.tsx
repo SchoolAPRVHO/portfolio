@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import styles from "./Dadjoke.module.css";
 
 const DadJoke = () => {
   const [joke, setJoke] = useState("");
@@ -21,10 +22,12 @@ const DadJoke = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Dad Joke</h1>
-      <button onClick={getDadJoke}>Get Joke</button>
-      {joke && <p>{joke}</p>}
+      <div className={styles.flex}>
+        {joke && <p>{joke}</p>}
+        <button className={styles.button}onClick={getDadJoke}>Get Joke</button>
+      </div>
     </div>
   );
 };

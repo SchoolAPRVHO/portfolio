@@ -7,6 +7,7 @@ import PokemonApp from "./Pokemon/Pokemon";
 import QuizAppComplete from "./QuizApp/QuizApp";
 import Slots from "./Slots/Slots";
 import TicTacToe from "./TicTacToe/TicTacToe";
+import TodoApp from "./TodoApp/TodoApp";
 
 
 const Showcases = () => {
@@ -20,6 +21,7 @@ const Showcases = () => {
             {showcaseId === "5" && <TicTacToe/>}
             {showcaseId === "6" && <PokemonApp/>}
             {showcaseId === "7" && <DadJoke/>}
+            {showcaseId === "8" && <TodoApp/>}
         </>
     );
     };

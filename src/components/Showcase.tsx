@@ -66,6 +66,12 @@ const showcases: IShowcase[] = [
     description: "This application accesses a dadjoke API to return a joke",
     path: "/showcase/7",
   },
+  {
+    id: 8,
+    title: "Todo Application",
+    description: "This is an easy todo application practising states",
+    path: "/showcase/8",
+  },
 ];
 
 const theme = createTheme();

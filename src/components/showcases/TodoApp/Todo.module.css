@@ -1,0 +1,38 @@
+
+.AppContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    column-gap: 3rem;
+}
+
+.container {
+    border: 2px solid black;
+    border-radius: 2rem;
+    width: 50%;
+    height: 50%;
+    padding: 2rem;
+    margin: auto;
+}
+
+.ListContainer {
+    padding:1rem;
+}
+
+.ListContainer table {
+   width: 75%;
+}
+
+.viewContainer {
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+.InputContainer {
+    display: flex;
+    column-gap: 2rem;
+    justify-content: flex-end;
+}
