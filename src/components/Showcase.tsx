@@ -60,6 +60,12 @@ const showcases: IShowcase[] = [
     description: "This application is a basic start and Pokedex",
     path: "/showcase/6",
   },
+  {
+    id: 7,
+    title: "Dadjoke Module",
+    description: "This application accesses a dadjoke API to return a joke",
+    path: "/showcase/7",
+  },
 ];
 
 const theme = createTheme();
