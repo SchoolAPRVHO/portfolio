@@ -87,7 +87,7 @@ const Home = () => {
             <Button variant="contained" onClick={() => navigate("/showcase")}>
               Look at all the different schoolproject I have done
             </Button>
-            <Button variant="outlined">Go to the API-section</Button>
+            <Button variant="outlined" onClick={()=> navigate("/api")}>Go to the API-section</Button>
           </Stack>
         </Container>
       </Box>

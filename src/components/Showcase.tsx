@@ -17,6 +17,7 @@ import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Navigate, NavLink, useNavigate } from "react-router-dom";
 import { IShowcase } from "../interfaces";
+import { text } from "body-parser";
 
 // const showcases = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const showcases: IShowcase[] = [
@@ -64,6 +65,12 @@ const showcases: IShowcase[] = [
     id: 7,
     title: "Todo Application",
     description: "This is an easy todo application practising states",
+    path: "/showcase/7",
+  },
+  {
+    id: 8,
+    title: "Shoppinglist",
+    description: "This is an easy shoppinglist application practising states",
     path: "/showcase/8",
   },
 ];
@@ -71,6 +78,7 @@ const showcases: IShowcase[] = [
 const theme = createTheme();
 
 const Showcase = () => {
+  const [inputValue, setInputValue] = React.useState<string>("");
   const navigate = useNavigate();
   return (
     <>
@@ -141,40 +149,83 @@ const Showcase = () => {
             </Typography>
           </Container>
         </Box>
+        <Box
+          sx={{
+            bgcolor: "background.main",
+            pt: 8,
+            pb: 6,
+          }}
+        >
+          <Container maxWidth="md" style={{textAlign:"center"}}>
+          <Grid container spacing={4}>
+            <Grid item xs={12} sm={6} md={8}>
+            <input
+              type={"text"}
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              style={{
+                width: "100%",
+                height: "50px",
+                fontSize: "20px",
+                padding: "10px",
+              }}
+            ></input>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => setInputValue("")}
+            >Delete Searchparameters
+            </Button>
+            </Grid>
+            </Grid>
+          </Container>
+        </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {showcases.map((card, index) => (
-              <Grid item key={index} xs={12} sm={6} md={4}>
-                <Card
-                  sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      {card.title}
-                    </Typography>
-                    <Typography>{card.description}</Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button
-                      variant="contained"
-                      sx={{
-                        display: "flex",
-                        alignSelf: "center",
-                        margin: "0 auto",
-                      }}
-                      onClick={(e) => navigate(card.path)}
-                    >
-                      check it out
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
+            {showcases
+              .filter((card) => {
+                if (inputValue === "") {
+                  return card;
+                } else if (
+                  card.title.toLowerCase().includes(inputValue.toLowerCase())
+                ) {
+                  return card;
+                }
+              })
+              .map((card, index) => (
+                <Grid item key={index} xs={12} sm={6} md={4}>
+                  <Card
+                    sx={{
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <CardContent sx={{ flexGrow: 1 }}>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        {card.title}
+                      </Typography>
+                      <Typography>{card.description}</Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button
+                        variant="contained"
+                        sx={{
+                          display: "flex",
+                          alignSelf: "center",
+                          margin: "0 auto",
+                        }}
+                        onClick={(e) => navigate(card.path)}
+                      >
+                        check it out
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Grid>
+              ))}
           </Grid>
         </Container>
       </main>
