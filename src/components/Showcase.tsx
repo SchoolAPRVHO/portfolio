@@ -57,8 +57,8 @@ const showcases: IShowcase[] = [
   },
   {
     id: 6,
-    title: "Pokemon App",
-    description: "This application is a basic start and Pokedex",
+    title: "Timer application",
+    description: "This application is a basic component using time",
     path: "/showcase/6",
   },
   {

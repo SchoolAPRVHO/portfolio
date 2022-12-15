@@ -51,7 +51,7 @@ interface QuestionProps {
   setUserAnswer: (answer: string) => void;
 }
 
-const Question = ({ question, setUserAnswer, userAnswer }: QuestionProps) => {
+const Questions = ({ question, setUserAnswer, userAnswer }: QuestionProps) => {
   let color = "white";
   if (userAnswer !== undefined) {
     if (userAnswer === question.correct_answer) {
@@ -149,7 +149,7 @@ const QuizApp = () => {
     <>
       {questions.map((question, index) => {
         return (
-          <Question
+          <Questions
             question={question}
             userAnswer={question.user_answer!}
             setUserAnswer={(answer) => {

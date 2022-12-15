@@ -37,13 +37,7 @@ const api: IShowcase[] = [
     title: "QR-code generator",
     description: "When you need a QR-code, this is the place to be",
     path: "/api/3",
-  },
-  {
-    id: 4,
-    title: "Sudoku",
-    description: "Always wanted to solve a sudoku during work?",
-    path: "/api/4",
-  },
+  }
 ];
 
 const Api = () => {

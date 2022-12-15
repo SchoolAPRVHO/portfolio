@@ -1,5 +1,5 @@
 import { Container } from '@mui/material';
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './TicTacToe.module.css';
 
 const TicTacToe = () => {
@@ -59,7 +59,7 @@ const TicTacToe = () => {
   );
 };
 
-const App: FC = () => (
+const App = () => (
   <Container className={styles.container}>
     <h1>Tic Tac Toe</h1>
     <div className={styles.TicTacToe} style={{marginTop: 10, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
@@ -68,4 +68,4 @@ const App: FC = () => (
   </Container>
 );
 
-export default () => <App />;
+export default App;

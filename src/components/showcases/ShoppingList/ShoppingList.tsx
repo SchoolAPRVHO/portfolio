@@ -1,5 +1,4 @@
 import { Button } from "@mui/material";
-import { style } from "@mui/system";
 import React, { useState } from "react";
 import styles from "./ShoppingList.module.css";
 interface IShoppingListItem {

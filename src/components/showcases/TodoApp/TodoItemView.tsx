@@ -2,7 +2,6 @@ import React from "react";
 import { TodoItem } from "./TodoList";
 import Checkbox from '@mui/material/Checkbox';
 import { Button } from "@mui/material";
-import styles from './Todo.module.css';
 
 interface ITodoItemProps{
     todo:TodoItem,
